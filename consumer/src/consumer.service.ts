@@ -24,7 +24,7 @@ export class ConsumerService implements OnModuleInit {
     await this.consumer.run({
       eachMessage: async ({ message }) => {
         if (!message.value) {
-          console.warn('Mensagem sem valor recebido, ignorando...');
+          console.warn('Mensagem sem valor recebido, ignorando.!');
           return;
         }
         const data = JSON.parse(message?.value.toString());
